@@ -9,14 +9,18 @@ html, body {
 	font-family: 'Inter', sans-serif;
 }
 
+
+
 :root {
 	--white:  #ffffff;
     --black:  #000000;
     --blue: #0B1729;
     --blueLight: #165DAB;
     --blueTrans:  rgba(11,23,41,0.67);
+    --blueMed:  #15528F;
     --grey: #707375;
 	--greyLight: #E5E5E5;
+	--greyMedim:  #8A919B;
 	--red: #EE2553;
 	--green:  #7BC142;
 }
@@ -131,6 +135,7 @@ text-decoration: none;
 
 .field_wrap .form_field {
 	padding: 12px 10px;
+	height:  100%;
 }
 
 
@@ -211,6 +216,30 @@ header.alternate {
 }
 
 
+.floatable.checkout select, .floatable.checkout input[type="text"] {
+	border: 1px solid var(--blueMed);
+}
+
+
+.floatable.checkout .field_wrap .field_label {
+	top:  -20px;
+}
+
+.floatable.checkout .round-xy, .floatable.checkout .round-xy:focus {
+	border-radius: 16px;
+}
+
+.floatable.checkout .round-left, .floatable.checkout .round-left:focus {
+	border-radius:  16px 0 0 16px;
+}
+
+.floatable.checkout .round-right, .floatable.checkout .round-right:focus  {
+	border-radius:  0 16px 16px 0;	
+}
+
+
+
+
 .search_tab_indidcators .tab_indicator {
 	border-radius: 8px 8px 0 0;
 }
@@ -260,3 +289,26 @@ header.alternate {
     top: 1px;
 }
 
+/* checkout  */
+
+.search__btn.checkout {
+	background-color: var(--green);
+}
+
+.mt-3 {
+	margin-top: 3px;
+}
+
+.flight-details .flight_details_inner {
+	border: 1px solid var(--blueMed);
+	border-radius:  20px;
+	padding: 20px 30px;
+}
+
+.action-label {
+	position: absolute;
+	right:  10px;
+	top:  .8rem;
+	text-decoration: none;
+	color:  var(--greyMed);
+}
