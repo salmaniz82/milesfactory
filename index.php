@@ -10,6 +10,10 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+
 </head>
 <body class="bg-grey-light">
 <header class="bg-white">
@@ -97,80 +101,75 @@
 	</div>
 
 
-	<div class="search_items d-flex gap-15 mb-50">
+	<div class="row">
+
+		<div class="col">one</div>
+		<div class="col">one</div>
+		<div class="col">one</div>
+		
+	</div>
+
+
+	<div class="search_items row gap-10 mb-50">
 
 		<?php for ($i=0; $i<= 2; $i++) : ?>
 
-		<div class="search_item flex-basis-1/3 bg-white py-20">
 
-			<div class="item_inner px-30 py-10">
+			<div class="search_item col bg-white py-20">
+      <div class="item_inner px-30 py-10">
 
-			<div class="depart d-flex flex-wrap justify-space-between pb-20 divider">
 
-				<div class="flex-basis-1 item_header t-blue-light t-sm pb-20">Depart</div>
+         <div class="depart d-flex flex-wrap justify-space-between pb-20 divider">
+            <div class="flex-basis-1 item_header t-blue-light t-sm pb-20">Depart</div>
+            <div class="airline_logo">
+               <img src="images/airline-logo.png" alt="">
+            </div>
+            <div class="item_detail">
+               <div class="timings">4:45 AM - 10:00 AM</div>
+               <div class="flight_routes t-xs">
+                  <span>CDJ</span>
+                  <span class="t-red">JED</span>
+                  <span>CDJ</span>
+               </div>
+            </div>
+            <div class="item_meta t-sm">
+               <p class="mb-0">14h10m</p>
+               <p class="t-red">1 stop</p>
+            </div>
+         </div>
+         <div class="return d-flex flex-wrap justify-space-between py-20 divider">
+            <div class="flex-basis-1 item_header t-blue-light t-sm pb-20">Return</div>
+            <div class="airline_logo">
+               <img src="images/airline-logo.png" alt="">
+            </div>
+            <div class="item_detail">
+               <div class="timings">4:45 AM - 10:00 AM</div>
+               <div class="flight_routes t-xs">
+                  <span>CDJ</span>
+                  <span class="t-red">JED</span>
+                  <span>CDJ</span>
+               </div>
+            </div>
+            <div class="item_meta t-sm">
+               <p class="mb-0">14h10m</p>
+               <p class="t-red">1 stop</p>
+            </div>
+         </div>
+         <div class="rates d-flex justify-space-between align-center pt-20">
+            <div class="price_indicator">
+               <img src="images/usd_circle.png" alt="">
+               <span>Cheapest</span>
+            </div>
+            <div class="price t-blue-trans">
+               <span class="amount t-lg">$534</span> 
+               <span> / per</span>
+            </div>
+         </div>
+      </div>
+      <!-- items inner -->
+   </div>
+   <!-- search item -->
 
-				<div class="airline_logo">
-					<img src="images/airline-logo.png" alt="">
-				</div>
-
-				<div class="item_detail">
-					<div class="timings">4:45 AM - 10:00 AM</div>
-					<div class="flight_routes t-xs">
-						<span>CDJ</span>
-						<span class="t-red">JED</span>
-						<span>CDJ</span>
-					</div>
-					
-				</div>
-
-				<div class="item_meta t-sm">
-					<p>14h10m</p>
-					<p class="t-red">1 stop</p>
-				</div>
-				
-			</div>
-
-			<div class="return d-flex flex-wrap justify-space-between py-20 divider">
-
-				<div class="flex-basis-1 item_header t-blue-light t-sm pb-20">Return</div>
-
-				<div class="airline_logo">
-					<img src="images/airline-logo.png" alt="">
-				</div>
-
-				<div class="item_detail">
-					<div class="timings">4:45 AM - 10:00 AM</div>
-					<div class="flight_routes t-xs">
-						<span>CDJ</span>
-						<span class="t-red">JED</span>
-						<span>CDJ</span>
-					</div>
-					
-				</div>
-
-				<div class="item_meta t-sm">
-					<p>14h10m</p>
-					<p class="t-red">1 stop</p>
-				</div>
-				
-			</div>
-
-			
-
-			<div class="rates d-flex justify-space-between align-center pt-20">
-				<div class="price_indicator">
-					<img src="images/usd_circle.png" alt="">
-					<span>Cheapest</span>
-				</div>
-				<div class="price t-blue-trans">
-					<span class="amount t-lg">$534</span> 
-					<span> / per</span>
-				</div>
-			</div>
-
-			</div><!-- items inner -->
-			
-		</div><!-- search item -->
 
 
 	<?php endfor; ?>
@@ -180,9 +179,14 @@
 	</div>
 
 
-	<div class="d-flex justify-center">
-		<div class="_btn t-white t-center bg-green d-block max-w-tiny">more tickets</div>	
+	<div class="row justify-center">
+
+		<div class="col-4 t-center">
+			<div class="_btn t-white t-center bg-green d-block max-w-tiny mx-auto">more tickets</div>		
+		</div>
+		
 	</div>
+
 		
 	</div>
 
@@ -192,7 +196,8 @@
 </section>
 
 
-
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 
 
 </body>
